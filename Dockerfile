@@ -1,4 +1,5 @@
 FROM python:3.8-slim-buster
+ENV APP_PORT 3000
 
 WORKDIR /app
 
@@ -7,7 +8,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE ${APP_PORT}
 
 # Obs: não recomendado para produção
 # mais informações: https://flask.palletsprojects.com/en/2.2.x/deploying/
