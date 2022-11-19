@@ -9,9 +9,13 @@ app = Flask(__name__)
 def hello_health():
     return "ok", 200
 
+@app.route("/keli")
+def hello_health():
+        return "Partiu parque e japa!!! =D", 200
+
 @app.route("/")
 def hello_world():
-    return "ola mundo"
+    return "Bem vindo ao meu dominio! Muahaha"
 
 
 if __name__ == "__main__":
